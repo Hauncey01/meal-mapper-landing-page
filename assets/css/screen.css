@@ -1,0 +1,272 @@
+body {
+    font-family: sans-serif;
+}
+main {
+    padding-left: 10rem;
+    padding-right: 10rem;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #FFB885;
+    margin-bottom: 1rem;
+    padding: 1rem 10rem;
+}
+
+header img {
+    width: 3rem;
+    height: 3rem;
+    padding-left: 2rem;
+}
+
+header h1 {
+    padding-left: 1rem;
+    font-size: 1.8rem;
+}
+
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+header button {
+    display: none;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    gap: 4rem;
+    padding-right: 4rem;
+}
+a {
+    color: #000000;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.wrapper section {
+    display: flex;
+    flex: 1;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    align-items: center;
+}
+
+#introduction p, #features ul {
+    margin:auto;
+}
+
+#introduction {
+    position:relative;
+    border-right: black solid 1px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 30rem;
+}
+
+#introduction::before {
+    content: "";
+    position: absolute;
+    width: 150%;
+    height: 150%;
+    background-image: url("../images/logo_background.png");
+    background-repeat: no-repeat;
+    background-size: 200%;
+    background-position: center;
+    transform: translate(-20%, 10%) rotate(-18deg);
+    opacity: 0.3;
+    z-index: 0;
+    filter: blur(4px);
+}
+
+#introduction p{
+    padding: 2rem;
+    background-color: #D7FED9;
+    border-radius: 0.5rem;
+    max-width: 16rem;
+    z-index: 1;
+}
+#features{
+    background-color: #F8FFF8;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+#features ul li {
+    line-height: 2rem;
+    display: flex;
+    align-items: flex-start;
+    margin: 0.5rem;
+}
+
+#highlight {
+    text-align: center;
+    margin-left: 3rem;
+    margin-right: 3rem;
+}
+#highlight h2{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+#highlight .wrapper {
+    justify-content: space-evenly;
+    gap: 4rem;
+}
+#highlight img {
+    max-height: 25rem;
+    max-width: 25rem;
+    border-radius: 10%;
+    object-fit: cover;
+}
+
+#image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex: 1;
+}
+#recipe {
+    text-align: left;
+    line-height: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+#recipe p{
+    display: flex;
+    align-items: center;
+}
+
+#recipe h3, #recipe h4 {
+    padding-bottom: 0.25rem;
+    font-weight: bold;
+}
+#recipe li {
+    list-style: disc;
+}
+#rating-star {
+    color: gold;
+}
+
+footer {
+    margin-top: 5rem;
+    background-color: #85E08A;
+}
+footer ul {
+    display: flex;
+    flex-direction: row;
+}
+footer li {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem;
+    font-size: 0.75rem;
+}
+footer li a {
+    font-size: 1rem;
+}
+
+@media (max-width: 1024px) {
+    header {
+        padding-left: unset;
+        padding-right: unset;
+    }
+    main {
+        padding: unset;
+    }
+    #highlight img {
+        max-height: 15rem;
+        max-width: 15rem;
+    }
+    #introduction {
+        min-height: unset;
+    }
+}
+@media (max-width: 480px) {
+    header {
+        align-items: center;
+        flex-direction: column;
+        padding: 0.25rem;
+    }
+
+    .header-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+        padding-left: 0.25rem;
+    }
+
+    header img {
+        width: 2rem;
+        height: 2rem;
+        padding-left: unset;
+    }
+
+    header button {
+        display: unset;
+        border:none;
+        background-color: transparent;
+        margin-left: auto;
+    }
+    header nav {
+        display: none;
+        width: 100%;
+        padding-bottom: 1rem;
+    }
+    .nav-wrapper {
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        padding-left: 0.5rem;
+    }
+
+    .wrapper {
+        flex-direction: column;
+        padding: 1rem;
+    }
+
+    .wrapper section:first-of-type {
+        border-right: none;
+    }
+    #highlight .wrapper {
+        gap: 2rem;
+    }
+    #introduction{
+        border-right: unset;
+        min-height: 12rem;
+    }
+
+    #introduction::before {
+        background-size: 150%;
+    }
+
+    #introduction p{
+        padding: 1rem;
+    }
+    #features {
+        margin-top: 2rem;
+    }
+
+}
